@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block pres_active_bar %}active{% endblock %}
+
+{% block title %}Présentation du projet{% endblock %}
+
+{% block header %}
+    <header class="bg-white py-5">
+        <div class="container mt-5">
+            <div class="text-center text-info">
+                <h1 class="font-weight-bold">Présentation du projet</h1>
+            </div>
+        </div>
+    </header>
+{% endblock%}
+
+{% block content %}
+    <!-- Content -->
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h2>Objectifs du projet</h2>
+        <p>Dans le domaine de l’imagerie médicale, le diagnostic d’une image cardiaque par résonance magnétique nécessite parfois l’intervention de radiologues qui doivent délimiter manuellement les différentes structures du cœur, pour en extraire des informations fonctionnelles telles que le volume cardiaque au cours du temps ou encore la fraction d’éjection. Les battements cardiaques faisant intervenir chaque partie du complexe cardiaque, délimiter le cœur seul peut ne pas suffire selon l’application, et une segmentation des différentes structures le composant (ventricule droit et gauche, myocarde) est souvent nécessaire</p>
+        <p>Le machine Learning, et plus particulièrement le Deep Learning, ont permis l’émergence de nouveaux algorithmes qui deviennent peu à peu la norme dans la communauté du traitement d’images.</p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h2>Justificatif du projet</h2>
+        <p>La délimitation des différentes parties du cœur est coûteuse et nécessite énormément de temps, c’est pour cela que le développement de méthodes de segmentation automatique est fortement recommandé pour aider les radiologues dans leur travail et participer à la facilitation du diagnostic du cœur. L’objectif du projet est de construire un modèle de segmentation d’image à partir de réseaux de neurones afin de faciliter le travail des radiologues.</p>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h2>Les limites du projet</h2>
+        <p>Le projet concerne le milieu médical et nécessite d’utiliser des modèles construits à partir de réseaux de neurones.</p>
+        <p>Le projet se limite à la conception d’un IA basé sur un réseau de neurones capable de réaliser un première segmentation à la place du médecin pour lui alléger la quantité de travail. Cependant ce projet n’a pas pour ambition de fournir une IA qui réalisera l'intégralité du travail sans aucun contrôle humain. En effet, il sera toujours nécessaire que le médecin procédé à une vérification des résultats fournis par l’algorithme pour éviter toute erreur médical</p>
+    </div>
+
+{% endblock %}

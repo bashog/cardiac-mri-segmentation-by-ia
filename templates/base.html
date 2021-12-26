@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- Graph -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+
+
+        <!-- Bootstrap Core CSS -->
+        <link href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('view_home') }}">Segmentation</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link {% block home_active_bar %}{% endblock %}" href="{{ url_for('view_home') }}">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link {% block pres_active_bar %}{% endblock %}" href="{{ url_for('view_pres_proj') }}">Présentation du
+                        projet</a></li>
+                    <li class="nav-item"><a class="nav-link {% block about_active_bar %}{% endblock %}" href="{{ url_for('view_a_propos') }}">A propos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    {% block header %}{% endblock %}
+
+    <!-- Content -->
+    <section>
+        <div class="container px-4 px-lg-5 mt-5">
+
+
+            {% block content %}{% endblock %}
+        </div>
+    </section>
+
+    <hr/>
+
+
+    <!-- Footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <p class="copyright text-muted">Copyright &copy; ... 2021</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,29 @@
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <form action = "{{ url_for('prediction') }}" method = "POST" enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit" value = "Submit" class="btn btn-info"/>
+        </form>
+
+        {% if image_upload_no_lbl != None and image_predict_lbl!= None %}
+            <script>
+            var graphs = {{ image_upload_no_lbl | safe }};
+            Plotly.plot('image_upload_no_lbl', graphs);
+            </script>
+            <div id="image_no_lbl"></div>
+
+            <form action = "{{ url_for('prediction') }}" method = "POST">
+                <input type = "submit" value = "Segmenter" class="btn btn-info" />
+            </form>
+        {% endif %}
+
+</div>
+
+{% if image_predict_lbl!= None %}
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <script>
+            var graphs = {{ image_predict_lbl | safe }};
+            Plotly.plot('image_predict_lbl', graphs);
+            </script>
+            <div id="image_predict_lbl"></div>
+    </div>
+{% endif %}

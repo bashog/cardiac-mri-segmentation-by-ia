@@ -1,0 +1,32 @@
+.jumbotron {
+background-size: cover;
+}
+
+.content {
+    margin-top: 30px;
+    min-height: 100%;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+
+
+
+header.masthead {
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-attachment: scroll;
+  position: relative;
+  background-size: cover;
+}
+header.masthead .page-heading{
+  padding: 200px 0 150px;
+  color: white;
+}
+
+footer {
+  padding: 50px 0 65px;
+}

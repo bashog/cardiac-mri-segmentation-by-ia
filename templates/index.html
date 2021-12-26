@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block home_active_bar %}active{% endblock %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block header %}
+    <header class="bg-white py-5">
+        <div class="container mt-5">
+            <div class="text-center text-info">
+                <h1 class="font-weight-bold">Segmentation d’image d’IRM cardiaque</h1>
+            </div>
+        </div>
+    </header>
+
+{% endblock%}
+
+{% block content %}
+    <!-- Content -->
+
+
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h3 class="text-center font-weight-bold">Exemple de segmentation</h3>
+        <div class="row">
+            <div class="col">
+                <div id="image_no_lbl"></div>
+            </div>
+            <div class="col">
+                <div id="image_lbl"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-white text-center">
+        <a class="btn btn-info btn-lg btn-block" href="{{ url_for('prediction') }}" role="button">Segmenter votre IRM</a>
+    </div>
+
+<script>
+    var graphs = {{ context.image_no_lbl | safe }};
+    Plotly.plot('image_no_lbl', graphs);
+</script>
+<script>
+    var graphs = {{ context.image_lbl | safe }};
+    Plotly.plot('image_lbl', graphs);
+</script>
+{% endblock %}

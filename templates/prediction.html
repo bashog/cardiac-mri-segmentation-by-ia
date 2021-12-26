@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block precit_active_bar %}active{% endblock %}
+
+{% block title %}Prédiction{% endblock %}
+
+{% block header %}
+    <header class="bg-white py-5">
+        <div class="container mt-5">
+            <div class="text-center text-info">
+                <h1 class="font-weight-bold">Prédiction</h1>
+            </div>
+        </div>
+    </header>
+{% endblock%}
+
+{% block content %}
+    <!-- Content -->
+    <div class="shadow-lg p-3 mb-5 bg-white text-center">
+        {% if context.image_upload_no_lbl == 'empty' %}
+            <form action = "{{ url_for('prediction') }}" method = "POST" enctype = "multipart/form-data">
+             <input type = "file" name = "file" />
+             <input type = "submit" value = "Envoyer" name = "Submit-IRM" class="btn btn-info"/>
+            </form>
+        {% endif %}
+
+        {% if context.image_predict_lbl != 'empty' and context.image_upload_no_lbl != 'empty' %}
+        <h3 class="text-center font-weight-bold">Résultat</h3>
+        <div class="row">
+            <div class="col">
+                <div id="image_upload_no_lbl"></div>
+            </div>
+            <div class="col">
+                <div id="image_predict_lbl"></div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+{% if context.image_predict_lbl != 'empty' and context.image_upload_no_lbl != 'empty' %}
+    <script>
+        var graphs = {{ context.image_upload_no_lbl | safe }};
+        Plotly.plot('image_upload_no_lbl', graphs);
+    </script>
+    <script>
+        var graphs = {{ context.image_predict_lbl | safe }};
+        Plotly.plot('image_predict_lbl', graphs);
+    </script>
+{% endif %}
+
+{% endblock %}

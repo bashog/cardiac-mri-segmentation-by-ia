@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block about_active_bar %}active{% endblock %}
+
+{% block title %}Présentation du projet{% endblock %}
+
+{% block header %}
+    <header class="bg-white py-5">
+        <div class="container mt-5">
+            <div class="text-center text-info">
+                <h1 class="font-weight-bold">A propos</h1>
+            </div>
+        </div>
+    </header>
+{% endblock%}
+
+{% block content %}
+    <!-- Content -->
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h2>Les membres de l'équipe</h2>
+        <ul>
+            <li>Alexandre Abela</li>
+            <li>Basile Hogenmuller</li>
+            <li>Emma Mendizabal</li>
+            <li>Hugo Fourel</li>
+            <li>Jonathan Desnoyer</li>
+            <li>Joey skaf</li>
+            <li>Pierre Paynat</li>
+            <li>Vincent Lebé</li>
+        </ul>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <h2>Ressources</h2>
+        <p>Base donnés utilisées pour l'entrainement: <a href="https://acdc.creatis.insa-lyon.fr/description/databases.html">ACDC dataset</a></p>
+        </div>
+
+{% endblock %}
