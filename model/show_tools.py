@@ -39,26 +39,3 @@ def slice_img3D(np_img, title):
    return fig
 
 
-
-
-'''
-import model.predict as prd
-import model.show_tools as st
-
-
-img_no_lbl = prd.load_nii('medias/anonyme.nii.gz')
-img_lbl = prd.load_nii('medias/anonyme_gt.nii.gz')
-img_predict = prd.predict('medias/anonyme_gt.nii.gz')
-
-st.show_img(img_no_lbl[0],5)
-st.show_img(img_lbl[0],5)
-st.show_img(img_predict,5)
-
-import plotly.graph_objects as go
-
-fig = px.imshow(img_no_lbl[0], animation_frame=0, binary_string=True, labels=dict(animation_frame="slice"))
-fig.show()
-'''
-
-
-
