@@ -35,6 +35,7 @@ def slice_img3D(np_img, title):
          'y': 0.27
          }
    )
+
    return fig
 
 
