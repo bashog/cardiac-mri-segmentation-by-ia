@@ -31,3 +31,9 @@ This brings a double advantage. First, radiologists will not have to worry about
 We decided to use Flask to create the site. It is a web development framework in Python. It provides useful tools and features that make it easy to create web applications in Python. It allows both to run HTML pages and to use Python functions in the back-end. The pages of the site are therefore dynamic and the project is very scalable. We could easily add features in the future.
 For the visualization, we decided to use the Plotly library. It allows to create interactive graphs and supports many types of input data. The MRIs are three-dimensional files (different images per layer). We naturally turned to this solution.
 
+### Structure of the code
+- *medias* contains the data files useful for visualization and prediction. There are both the data provided by users (radiologists) and those for the demonstrations on the home page of the platform.
+- *model* contains the machine learning model files. For security and data protection reasons, only the model weights are here and not the training data. 
+- *templates* contains the different HTML pages of the website
+- *app.py* is the main file running Flask. It allows both to call Python functions (like the machine learning model) and HTML files allowing the generation of dynamic web pages
+- *requirements* is the configuration file
