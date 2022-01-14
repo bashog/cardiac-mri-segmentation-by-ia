@@ -11,7 +11,7 @@ In a world where technology is constantly taking the place of humans, the medica
 The delineation of the different parts of the heart is costly and time consuming, so the development of automatic segmentation methods is highly recommended to help radiologists in their work and participate in the facilitation of the diagnosis of the heart. The objective of the project is to build an image segmentation model based on neural networks to facilitate the work of radiologists.
 
 ## Example
-
+![Example](https://github.com/bashog/cardiac-mri-segmentation-by-ia/blob/master/static/images/example.png)
 
 ## Technical details of U-Net : neural networks for computer vision
 U-NET is a neural network model dedicated to Computer Vision tasks and more particularly to Semantic Segmentation problems. Semantic segmentation consists in labeling each pixel of an image with a class corresponding to what is represented. It is also called "dense prediction", because each pixel must be predicted. 
