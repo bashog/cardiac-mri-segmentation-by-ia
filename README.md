@@ -37,3 +37,8 @@ For the visualization, we decided to use the Plotly library. It allows to create
 - *templates* contains the different HTML pages of the website
 - *app.py* is the main file running Flask. It allows both to call Python functions (like the machine learning model) and HTML files allowing the generation of dynamic web pages
 - *requirements* is the configuration file
+
+## How to use the platform
+1. Download the project
+2. Download thethe necessary libraries listed in *requirements*
+3. Run the flask program
