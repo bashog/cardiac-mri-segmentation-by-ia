@@ -46,14 +46,13 @@ For the visualization, we decided to use the Plotly library. It allows to create
 2. Download thethe necessary libraries listed in *requirements*
 3. Run the flask program
 
-## Contributor
-
-Pierre Paynat alias @PaynatPierre
-Alexandre Abela alias @alexandreabela
-Basile Hogenmuller alias @bashog
-Joey Skaf alias @jskaf34
-Emma Mendizabal alias @Emma-IA
-Vincent Lébé
-Hugo Fourel
-Jonathan Desnoyer
+## Contributors
+- Pierre Paynat alias @PaynatPierre
+- Alexandre Abela alias @alexandreabela
+- Basile Hogenmuller alias @bashog
+- Joey Skaf alias @jskaf34
+- Emma Mendizabal alias @Emma-IA
+- Vincent Lébé
+- Hugo Fourel
+- Jonathan Desnoyer
 
