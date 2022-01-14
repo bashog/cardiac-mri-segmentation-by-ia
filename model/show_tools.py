@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import plotly.express as px
 
 
-#affiche la k ième tranche de l'image 3D
+#displays the kth slice of the 3D image
 def show_img(np_img,k):
    plt.figure()
    plt.imshow(np_img[:, :, k], cmap='gray')
@@ -12,11 +12,12 @@ def show_img(np_img,k):
    return None
 
 
-#affiche les différentes tranches de l'image
+#displays the different slices of the 3D image
 def show_img3D(np_img):
    fig = px.imshow(np_img.T, animation_frame=0, binary_string=True, labels=dict(animation_frame="slice"))
    fig.show()
 
+#returns the plotly figure allowing the display of the different slices of the 3D image
 def slice_img3D(np_img, title):
    fig = px.imshow(np_img.T, animation_frame=0, binary_string=True, labels=dict(animation_frame="slice"))
    fig.update_xaxes(

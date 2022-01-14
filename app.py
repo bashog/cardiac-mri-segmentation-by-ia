@@ -37,7 +37,7 @@ def prediction():
                'image_predict_lbl': 'empty',
                }
 
-    if request.method == "POST": #upload de l'user
+    if request.method == "POST": #upload of the user
         file_upload = request.files['file']
         filename = secure_filename(file_upload.filename)
         current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
