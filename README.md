@@ -25,7 +25,7 @@ The architecture of U-NET consists of two paths. The first is the contraction pa
 ![Architecture of a U-Net](https://datascientest.com/wp-content/uploads/2021/05/u-net-architecture-1536x1023.png)
 *Architecture of a U-Net*
 
- The code of the model is available at this address: https://github.com/Emma-IA/PT_Segmentation_IRM
+ The code of the model and a more detailled dcumentation is available at this address: https://github.com/Emma-IA/PT_Segmentation_IRM
 
 ## The interactive platform
 As a continuation of the project, we wanted to deploy our machine learning model to make it accessible to the medical world in the form of an online platform only accessible to the medical world. Only accessible to the medical world for data protection reasons because medical data can be sensitive.
