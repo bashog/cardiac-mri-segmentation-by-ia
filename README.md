@@ -10,9 +10,7 @@ In a world where technology is constantly taking the place of humans, the medica
 
 The delineation of the different parts of the heart is costly and time consuming, so the development of automatic segmentation methods is highly recommended to help radiologists in their work and participate in the facilitation of the diagnosis of the heart. The objective of the project is to build an image segmentation model based on neural networks to facilitate the work of radiologists.
 
-## Technical details
-
-### U-Net : neural networks for computer vision
+## Technical details of U-Net : neural networks for computer vision
 U-NET is a neural network model dedicated to Computer Vision tasks and more particularly to Semantic Segmentation problems. Semantic segmentation consists in labeling each pixel of an image with a class corresponding to what is represented. It is also called "dense prediction", because each pixel must be predicted. 
 
 There are different methods to solve semantic segmentation problems. The traditional approaches consist in detecting points, lines or edges. It is also possible to rely on morphology, or to assemble clusters of pixels.
@@ -21,6 +19,15 @@ One of the most used neural networks for image segmentation is U-NET. It is a fu
 
 The architecture of U-NET consists of two paths. The first is the contraction path, also called the encoder. It is used to capture the context of an image. It is in fact an assembly of convolution layers and "max pooling" layers allowing to create a map of the characteristics of an image and to reduce its size in order to reduce the number of parameters of the network.The second path is the symmetrical expansion path, also called decoder. It also allows a precise localization thanks to the transposed convolution.
 
+![Architecture of a U-Net](https://datascientest.com/wp-content/uploads/2021/05/u-net-architecture-1536x1023.png)
+*Architecture of a U-Net*
 
+ The code of the model is available at this address: https://github.com/Emma-IA/PT_Segmentation_IRM
 
-## How to use it ?
+## The interactive platform
+As a continuation of the project, we wanted to deploy our machine learning model to make it accessible to the medical world in the form of an online platform only accessible to the medical world. Only accessible to the medical world for data protection reasons because medical data can be sensitive.
+This brings a double advantage. First, radiologists will not have to worry about setting up the algorithm, they will just have to send the MRI. The model running on an external server will return the segmentation. The site also allows for an interactive layer-by-layer visualization of the MRI. Moreover, if radiologists and patients agree, the sent MRIs could be sources of training data to improve the model later on.
+
+We decided to use Flask to create the site. It is a web development framework in Python. It provides useful tools and features that make it easy to create web applications in Python. It allows both to run HTML pages and to use Python functions in the back-end. The pages of the site are therefore dynamic and the project is very scalable. We could easily add features in the future.
+For the visualization, we decided to use the Plotly library. It allows to create interactive graphs and supports many types of input data. The MRIs are three-dimensional files (different images per layer). We naturally turned to this solution.
+
